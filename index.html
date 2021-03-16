@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    
+    <title>Pentonium - Decentralized freelancing workplace</title>
+    <meta name="description" content="Pentonium is a decentralised freelancing platform designed over Binance Smart Chain. Pentonium is built to bring together blockchain-related service provider on a single platform and remove the trust issues faced by both the parties."/>
+
+    <style>
+        img{
+            max-width: 100%;
+        }
+        .navbar{
+            height: 120px;
+            background-color: #202e68;
+        }
+
+        .navbar-brand img{
+            height: 72px;
+            vertical-align: middle;
+        }
+
+        .navbar-brand  span{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 28px;
+            color: white;
+        }
+        .navbar-expand-lg .navbar-nav .nav-link{
+            padding-right: .5rem;
+            padding-left: .5rem;
+            color: #fff;
+        }
+
+        .navbar-expand-lg .navbar-nav .nav-item + .nav-item{
+            margin-left: 40px;
+        }
+
+        .btn-blue{
+            background-color: #07c9ba;
+            color: #1f3b6c;
+            min-width: 220px;
+            line-height: 32px;
+            font-size: 16px;
+        }
+
+        .small-btn{
+            line-height: 32px;
+            min-width: 160px;
+        }
+
+        section{
+            position: relative;
+            /* height: 100vh; */
+            overflow: hidden;
+            width: 100%;
+        }
+
+        section + section{
+            padding-bottom: 160px;
+        }
+
+        section p{
+            font-size: 1.4rem;
+        }
+
+        section.first{
+            /* height: calc(100vh - 120px); */
+            padding-bottom: 100px;
+        }
+
+        .bg-first{
+            position: relative;
+        }
+
+        .bg-first::after{
+            content: "";
+            background-color: #202e68;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            height: 60vh;
+            width: 100vw;
+            padding-top: 160px;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+
+        .divider-half{
+            position: relative;
+        }
+
+        .divider-half::after{
+            content: "";
+            background-color: #e1edfe;
+            position: absolute;
+            left: calc(50% - 2px);
+            z-index: -1;
+            height: 100vh;
+            width: 4px;
+            padding-top: 160px;
+        }
+
+        section.first{
+            position: relative;
+        }
+
+        section.first h1{
+            padding-top: 60px;
+        }
+
+        section.first .img, section.first .img img{
+            position: relative;
+        }
+
+        section.first .img img{
+            border-radius: 24px;
+        }
+        
+
+        section.first .img::after{
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ffd8d9;
+            top:-75px;
+            right: -75px;
+            z-index: -1;
+        }
+
+        section.first .img::before{
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ffd8d9;
+            bottom:-75px;
+            left: -75px;
+            z-index: -1;
+        }
+        
+
+        .color-a{
+            color: #3b3b3c;
+        }
+
+        .color-white{
+            color: #fff;
+        }
+
+        h3.heading{
+            font-size: 44px;
+        }
+
+        .pt-160px{
+            padding-top: 160px;
+        }
+
+        .pt-200px{
+            padding-top: 200px;
+        }
+
+        .pt-120px{
+            padding-top: 120px;
+        }
+
+        .box{
+            width: 160px;
+            line-height: 160px;
+            display: inline-block;
+            text-align: center;
+            background: #f7fbfe;
+            color: #324c61;
+            border-radius: 20px;
+            box-shadow: 0 8px 6px -6px #bfbfbf;
+        }
+
+        .box + .box{
+            margin-left: 32px;
+        }
+
+        footer{
+            padding: 40px 0;
+            background-color: #f7fbfe;
+        }
+
+        footer img{
+            width: 60px;
+        }
+
+        footer h4.heading{
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        .links{
+            display: block;
+            text-decoration: none;
+            color: #a7a7a7;
+            font-size: 14px;
+        }
+
+        .links + .links{
+            margin-top: 8px;
+        }
+
+        .small{
+            font-size: 14px;
+        }
+
+        button{
+            border: 0;
+        }
+
+        .carousel-control-next, .carousel-control-prev{
+            background-color: transparent !important;
+        }
+
+        .carousel-control-prev-icon{
+            background-image: url(https://www.svgrepo.com/show/90610/left-arrow-chevron.svg) !important;
+        }
+
+        .carousel-control-next-icon{
+            background-image: url(https://www.svgrepo.com/show/39798/right-arrow.svg) !important;
+        }
+
+
+        .carousel-indicators{
+            bottom: -60px;
+        }
+
+
+        .carousel-indicators button{
+            width: 50px;
+        }
+
+        .carousel-indicators button.active{
+            background-color: #07c9ba;
+        }
+
+        .carousel-indicators button + button{
+            margin-left: 12px;
+        }
+
+        .social{
+            display: inline-block;
+            width: 112px;
+            max-width: 25%;
+            text-align: center;
+            padding: 20px;
+            background: #f7fbfe;
+            border-radius: 20px;
+        }
+
+        .social + .social{
+            margin-left: 56px;
+        }
+
+        .social img{
+            max-width: 100%;
+        }
+
+        .social div{
+            margin-top: 12px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #616669;
+        }
+
+        .accordion-button{
+            border-left: 0 !important;
+            border-right: 0 !important;
+            background: transparent !important;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .accordion-collapse{
+            border: 0;
+        }
+
+        .accordion-button:focus{
+            outline: none;
+            box-shadow: none;
+        }
+
+        .accordion-button:not(.collapsed){
+            color: #53575a;
+        }
+
+        a{
+            color: #1f3b6c;
+            text-decoration: none;
+        }
+
+        .container.w15pm{
+            width: calc(100% - 30%);
+        }
+
+        @media (max-width: 768px) {
+            .navbar-expand-lg .navbar-nav .nav-item + .nav-item{
+                margin:0 !important
+            }
+
+            .navbar-collapse{
+                background-color: #202f67 !important;
+                z-index: 100;
+            }
+
+            .social + .social{
+                margin-left: 32px;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        
+        <div class="container">
+            <a class="navbar-brand" href="https://pentonium.com">
+                <img src="./assets/img/logo-pent.png" alt="">
+                <span>Pentonium</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto: contact@pentonium.com">Contact</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <div class="btn btn-blue small-btn">Launch App</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="first">
+        <div class="bg-first"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-7 col-sm-12 col-xs-12">
+                    <h1 class="color-white text-center">Don't get lost!
+                        <br>
+                         Find it here</h1>
+                    <br>
+                    <div class="text-center">
+                        <div class="btn btn-blue"><a href="Pentonium.pdf">Whitepaper</a></div>
+                    </div>
+
+                    <br><br> <br>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-9 col-sm-12 col-xs-12">
+                    <div class="img">
+                        <img src="./assets/img/homepage.png" alt="">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <section class="pt-120px">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container w15pm">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-5 col-md-4 col-sm-12 col-xs-12">
+                            <div>
+                                <img src="./assets/img/marshal.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12">
+                            <br><br>
+                            <h3 class="heading text-center text-md-start">Marshal</h3>
+                            <br><br>
+                            <p class="text-center text-md-start">
+                                Become a marshal and get rewarded by dedicating your time and effort to help protect the network against fraud and bad actors. It just takes 1,000 PTM right now!
+                            </p>
+                            <br><br>
+                            <div class="text-center text-md-start">
+                                <div class="btn btn-blue">Become a Marshal</div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container w15pm">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-5 col-md-4 col-sm-12 col-xs-12">
+                            <div>
+                                <img src="./assets/img/vault.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12">
+                            <br><br>
+                            <h3 class="heading text-center text-md-start">Vault</h3>
+                            <br><br>
+                            <p class="text-center text-md-start">
+                                Earn rewards on staking PTM tokens. A portion of the platform's yield goes to the Vault which is awarded to each token holder.
+                            </p>
+                            <br><br>
+                            <div class="text-center text-md-start">
+                                <div class="btn btn-blue">Stake</div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container w15pm">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-5 col-md-4 col-sm-12 col-xs-12">
+                            <div>
+                                <img src="./assets/img/escrow.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12">
+                            <br><br>
+                            <h3 class="heading text-center text-md-start">Escrow</h3>
+                            <br><br>
+                            <p class="text-center text-md-start">
+                                Enjoy trustless transaction between client and service provider without a thirdparty. Escrow contract is designed to act as a automated middle man between client and service provider.
+                            </p>
+                            <br><br>
+                            <div class="text-center text-md-start">
+                                <div class="btn btn-blue">Get Started</div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </section>
+
+
+
+    <section class="pt-120px">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+                    <div>
+                        <img src="./assets/img/clients.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
+
+                    <h3 class="heading text-center text-md-start">Clients</h3>
+                    <br><br>
+                    <p class="text-center text-md-start">
+                        Browse job postings and get the quality job done within the required time frame
+                    </p>
+                    <br><br>
+                    <div class="text-center text-md-start">
+                        <div class="btn btn-blue">Browse</div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12 order-sm-2 order-lg-1 order-md-1">
+
+                    <h3 class="heading text-center text-md-start">Service Provider</h3>
+                    <br><br>
+                    <p class="text-center text-md-start">
+                        Post details of your service to attract new clients around the globe and work comfortably with flexible working-time 
+                    </p>
+                    <br><br>
+                    <div class="text-center text-md-start">
+                        <div class="btn btn-blue">Post a gig</div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 order-sm-1 order-lg-2 order-md-2">
+                    <div>
+                        <img src="./assets/img/service-provider.jpg" alt="">
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container">
+            <h3 class="heading text-center">FAQ</h3>
+            <br><br>
+            <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Why Pentonium ?
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        There are thousands of people who are doing freelancing and getting returns. There is no harm getting rewarded for your work. Basically freelancing  works on trust and that's where the problem arises. No one can assure you that you won't be cheated. We are trying to eliminate almost every problem associated with it and we believe that this will be helpful for both client and service providers.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        How Pentonium works ?
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Pentonium has efficiently removed all registration process.Anyone can act as a service provider as well as the client just by connecting their Metamask wallet. They can fix the amount for their work (However, the price can vary depending on the level of the project demanded by the client) and time period of the project. Once the deal is locked, the amount from the wallet of the client is locked in an escrow contract and the timer is activated. All the information shared between the client and the service provider goes through IPFS end to end encrypted chat service. After successful completion of the project within the time limit , the client will hit the “PAY”  icon and the amount will be transferred to the wallet of the service provider. However, service providers can use the ”Drop This Job” button to release the fund locked in the escrow contract. The fund will be sent back to the client. In case of dispute, both parties have to pay a fee for dispute resolution (If one party is to negate on depositing the fee, they would lose the case on the basis of non-participation) After the fee is received, the complete chat between them will be transferred to the Marshals.
+          </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Who is Marshal and how to become a Marshal ?
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        A marshal is anyone willing to dedicate his or her time and effort to help protect the network against fraud and bad actors for a reward.Marshals know about the subject, have worked in the industry and bring with them vast quantities of experience in that particular field. Once chosen, marshals are tasked with examining the evidence before voting in an A/B manner for the party they believe correct. At this point, the losing party has the ability to appeal should they feel so inclined.<br><br>
+        To become a  marshal, you need to stake at least 1,000 PTM  tokens in the vault contract. After the staking, you will need to open a proposal on why the community should vote and accept you as a marshal. If the majority of the votes approve your position as a marshal, you will be automatically approved on the marshal contract. If you are voted against as a marshal, you can simply stake PTM tokens and get rewarded. The more PTM they deposit, the more likely they will be chosen to arbitrate.<br><br>
+        Marshals will be rewarded from the fee charged for the dispute resolution and the commission against their DeFi holdings.
+        
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+        What is minimum whitdrawal amount ?
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        There is no minimum withdrawal amount.
+        </div>
+    </div>
+  </div>
+  
+</div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="text-center">
+                <h3 class="headin">Connect with us</h3>
+                <br><br>
+                <div class="social">
+                    <div><a href="https://t.me/pentonium">
+         <img alt="" src="./assets/img/telegram.png">Telegram</a></div>
+                </div>
+                <div class="social">
+                    <div><a href="https://twitter.com/pentonium_ptm">
+         <img alt="" src="./assets/img/twitter.png">Twitter</a></div>
+                </div>
+                <div class="social">
+                    <div><a href="https://pentonium.medium.com/">
+         <img alt="" src="./assets/img/medium.png">Medium</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container pt-4 pb-4">
+            <div class="row justify-content-between">
+                <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12">
+                    <img src="./assets/img/logo-pent-invert.png" alt="">
+
+                    <br><br><br>
+
+                    <p class="a-color small">© 2021 Pentonium</p>
+                </div>
+
+                <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                            <h4 class="heading">Products</h4>
+                            
+                            <a href="soon.html" class="links">Vault</a>
+                            <a href="soon.html" class="links">Marshal</a>
+                            <a href="" class="links">Login</a>
+                        </div>
+                         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                            <h4 class="heading">About Us</h4>
+                            
+                            
+                            <a href="mailto: contact@pentonium.com" class="links">Contact Us</a>
+                            <a href="soon.html" class="links">Features</a>
+                        </div>
+                         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                            <h4 class="heading">Resources</h4>
+                            
+                            <a href="" class="links">Help center</a>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12">
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
