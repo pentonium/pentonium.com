@@ -6,327 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/app.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
     
     <title>Pentonium - Decentralized freelancing workplace</title>
     <meta name="description" content="Pentonium is a decentralised freelancing platform designed over Binance Smart Chain. Pentonium is built to bring together blockchain-related service provider on a single platform and remove the trust issues faced by both the parties."/>
 
-    <style>
-        img{
-            max-width: 100%;
-        }
-        .navbar{
-            height: 120px;
-            background-color: #202e68;
-        }
 
-        .navbar-brand img{
-            height: 72px;
-            vertical-align: middle;
-        }
-
-        .navbar-brand  span{
-            display: inline-block;
-            vertical-align: middle;
-            font-size: 28px;
-            color: white;
-        }
-        .navbar-expand-lg .navbar-nav .nav-link{
-            padding-right: .5rem;
-            padding-left: .5rem;
-            color: #fff;
-        }
-
-        .navbar-expand-lg .navbar-nav .nav-item + .nav-item{
-            margin-left: 40px;
-        }
-
-        .btn-blue{
-            background-color: #07c9ba;
-            color: #1f3b6c;
-            min-width: 220px;
-            line-height: 32px;
-            font-size: 16px;
-        }
-
-        .small-btn{
-            line-height: 32px;
-            min-width: 160px;
-        }
-
-        section{
-            position: relative;
-            /* height: 100vh; */
-            overflow: hidden;
-            width: 100%;
-        }
-
-        section + section{
-            padding-bottom: 160px;
-        }
-
-        section p{
-            font-size: 1.4rem;
-        }
-
-        section.first{
-            /* height: calc(100vh - 120px); */
-            padding-bottom: 100px;
-        }
-
-        .bg-first{
-            position: relative;
-        }
-
-        .bg-first::after{
-            content: "";
-            background-color: #202e68;
-            position: absolute;
-            top: 0;
-            z-index: -1;
-            height: 60vh;
-            width: 100vw;
-            padding-top: 160px;
-            border-bottom-left-radius: 50%;
-            border-bottom-right-radius: 50%;
-        }
-
-        .divider-half{
-            position: relative;
-        }
-
-        .divider-half::after{
-            content: "";
-            background-color: #e1edfe;
-            position: absolute;
-            left: calc(50% - 2px);
-            z-index: -1;
-            height: 100vh;
-            width: 4px;
-            padding-top: 160px;
-        }
-
-        section.first{
-            position: relative;
-        }
-
-        section.first h1{
-            padding-top: 60px;
-        }
-
-        section.first .img, section.first .img img{
-            position: relative;
-        }
-
-        section.first .img img{
-            border-radius: 24px;
-        }
-        
-
-        section.first .img::after{
-            content: "";
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background-color: #ffd8d9;
-            top:-75px;
-            right: -75px;
-            z-index: -1;
-        }
-
-        section.first .img::before{
-            content: "";
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background-color: #ffd8d9;
-            bottom:-75px;
-            left: -75px;
-            z-index: -1;
-        }
-        
-
-        .color-a{
-            color: #3b3b3c;
-        }
-
-        .color-white{
-            color: #fff;
-        }
-
-        h3.heading{
-            font-size: 44px;
-        }
-
-        .pt-160px{
-            padding-top: 160px;
-        }
-
-        .pt-200px{
-            padding-top: 200px;
-        }
-
-        .pt-120px{
-            padding-top: 120px;
-        }
-
-        .box{
-            width: 160px;
-            line-height: 160px;
-            display: inline-block;
-            text-align: center;
-            background: #f7fbfe;
-            color: #324c61;
-            border-radius: 20px;
-            box-shadow: 0 8px 6px -6px #bfbfbf;
-        }
-
-        .box + .box{
-            margin-left: 32px;
-        }
-
-        footer{
-            padding: 40px 0;
-            background-color: #f7fbfe;
-        }
-
-        footer img{
-            width: 60px;
-        }
-
-        footer h4.heading{
-            font-size: 18px;
-            margin-bottom: 16px;
-        }
-
-        .links{
-            display: block;
-            text-decoration: none;
-            color: #a7a7a7;
-            font-size: 14px;
-        }
-
-        .links + .links{
-            margin-top: 8px;
-        }
-
-        .small{
-            font-size: 14px;
-        }
-
-        button{
-            border: 0;
-        }
-
-        .carousel-control-next, .carousel-control-prev{
-            background-color: transparent !important;
-        }
-
-        .carousel-control-prev-icon{
-            background-image: url(https://www.svgrepo.com/show/90610/left-arrow-chevron.svg) !important;
-        }
-
-        .carousel-control-next-icon{
-            background-image: url(https://www.svgrepo.com/show/39798/right-arrow.svg) !important;
-        }
-
-
-        .carousel-indicators{
-            bottom: -60px;
-        }
-
-
-        .carousel-indicators button{
-            width: 50px;
-        }
-
-        .carousel-indicators button.active{
-            background-color: #07c9ba;
-        }
-
-        .carousel-indicators button + button{
-            margin-left: 12px;
-        }
-
-        .social{
-            display: inline-block;
-            width: 112px;
-            max-width: 25%;
-            text-align: center;
-            padding: 20px;
-            background: #f7fbfe;
-            border-radius: 20px;
-        }
-
-        .social + .social{
-            margin-left: 56px;
-        }
-
-        .social img{
-            max-width: 100%;
-        }
-
-        .social div{
-            margin-top: 12px;
-            font-size: 14px;
-            font-weight: bold;
-            color: #616669;
-        }
-
-        .accordion-button{
-            border-left: 0 !important;
-            border-right: 0 !important;
-            background: transparent !important;
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        .accordion-collapse{
-            border: 0;
-        }
-
-        .accordion-button:focus{
-            outline: none;
-            box-shadow: none;
-        }
-
-        .accordion-button:not(.collapsed){
-            color: #53575a;
-        }
-
-        a{
-            color: #1f3b6c;
-            text-decoration: none;
-        }
-
-        .container.w15pm{
-            width: calc(100% - 30%);
-        }
-
-        @media (max-width: 768px) {
-            .navbar-expand-lg .navbar-nav .nav-item + .nav-item{
-                margin:0 !important
-            }
-
-            .navbar-collapse{
-                background-color: #202f67 !important;
-                z-index: 100;
-            }
-
-            .social + .social{
-                margin-left: 32px;
-            }
-        }
-    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
         
         <div class="container">
-            <a class="navbar-brand" href="https://pentonium.com">
+            <a class="navbar-brand" href="/">
                 <img src="./assets/img/logo-pent.png" alt="">
                 <span>Pentonium</span>
             </a>
@@ -342,11 +35,11 @@
                         <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="mailto: contact@pentonium.com">Contact</a>
+                        <a class="nav-link" href="mailto:contact@pentonium.com">Contact</a>
                     </li>
                     
                     <li class="nav-item">
-                        <<a class="btn btn-blue small-btn" href="https://beta.pentonium.com/">Launch App</a>
+                        <<a class="btn btn-blue small-btn" href="https://beta.pentonium.com/" target="_blank">Launch App</a>
                     </li>
                 </ul>
             </div>
@@ -356,28 +49,26 @@
     <section class="first">
         <div class="bg-first"></div>
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-7 col-sm-12 col-xs-12">
-                    <h1 class="color-white text-center">Blockchain based
-                        <br>
-                         freelancing platform</h1>
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <h1 class="color-white">Freelancers on a block</h1>
+                    <p class="color-white">
+                        A Decentralised freelancing platform with transparent governance and automated dispute resolution
+                    </p>
                     <br>
-                    <div class="text-center">
-                        <div class="btn btn-blue"><a href="Pentonium.pdf">Whitepaper</a></div>
+                    <div class="">
+                        <div class="btn btn-blue"><a href="/assets/pdf/Pentonium.pdf" target="_blank">Whitepaper</a></div>
                     </div>
 
                     <br><br> <br>
                 </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-md-9 col-sm-12 col-xs-12">
-                    <div class="img">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="img text-center">
                         <img src="./assets/img/homepage.png" alt="">
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </section>
 
@@ -470,26 +161,26 @@
         </button>
     </section>
 
-<section>
+    <section class="pt-120px">
         <div class="container">
             <div class="text-center">
                 <h1 class="headin">Technology used</h1>
                 <br><br>
-                <div class="social">
-                    <div>
-         <img alt="" src="images/ipfs.png">IPFS</div>
+                <div class="tech">
+                    <img alt="" src="images/ipfs.png">
+                    <div>IPFS</div>
                 </div>
-                <div class="social">
-                    <div>
-         <img alt="" src="images/sia.png">SIA</div>
+                <div class="tech">
+                    <img alt="" src="images/sia.png">
+                    <div>SIA</div>
                 </div>
-                <div class="social">
-                    <div>
-         <img alt="" src="images/dai.png">DAI</div>
+                <div class="tech">
+                    <img alt="" src="images/dai.png">
+                    <div>DAI</div>
                 </div>
-                <div class="social">
-                    <div>
-         <img alt="" src="images/oz.jpg">OPENZEPPELIN</div>
+                <div class="tech">
+                    <img alt="" src="images/oz.jpg">
+                    <div>OPENZEPPELIN</div>
                 </div>
             </div>
         </div>
@@ -513,7 +204,7 @@
                     </p>
                     <br><br>
                     <div class="text-center text-md-start">
-                        <a class="btn btn-blue" href="https://beta.pentonium.com/">Browse</a>
+                        <a class="btn btn-blue" href="https://beta.pentonium.com/" target="_blank">Browse</a>
                     </div>
                 </div>
             </div> 
@@ -533,7 +224,7 @@
                     </p>
                     <br><br>
                     <div class="text-center text-md-start">
-                        <a class="btn btn-blue" href="https://beta.pentonium.com/post-job">Post a gig</a>
+                        <a class="btn btn-blue" href="https://beta.pentonium.com/post-job" target="_blank">Post a gig</a>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 order-sm-1 order-lg-2 order-md-2">
@@ -613,20 +304,28 @@
                 <h3 class="headin">Connect with us</h3>
                 <br><br>
                 <div class="social">
-                    <div><a href="https://t.me/pentonium">
-         <img alt="" src="./assets/img/telegram.png">Telegram</a></div>
+                    <div>
+                        <a href="https://t.me/pentonium">
+                        <img alt="" src="./assets/img/telegram.png">Telegram</a>
+                    </div>
                 </div>
                 <div class="social">
-                    <div><a href="https://twitter.com/pentonium_ptm">
-         <img alt="" src="./assets/img/twitter.png">Twitter</a></div>
+                    <div>
+                        <a href="https://twitter.com/pentonium_ptm">
+                        <img alt="" src="./assets/img/twitter.png">Twitter</a>
+                    </div>
                 </div>
                 <div class="social">
-                    <div><a href="https://pentonium.medium.com/">
-         <img alt="" src="./assets/img/medium.png">Medium</a></div>
+                    <div>
+                        <a href="https://pentonium.medium.com/">
+                        <img alt="" src="./assets/img/medium.png">Medium</a>
+                    </div>
                 </div>
                 <div class="social">
-                    <div><a href="https://github.com/pentonium">
-         <img alt="" src="./assets/img/github.png">Github</a></div>
+                    <div>
+                        <a href="https://github.com/pentonium">
+                        <img alt="" src="./assets/img/github.png">Github</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -682,10 +381,5 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>
