@@ -50,11 +50,12 @@ img {
 }
 
 .btn-blue a{
-    color: #fbfbfb;
+    color: #202f67;;
 }
 
 .btn-blue.invert{
-    border: 1px solid white
+    background-color: #fbfbfb;
+    color: #202f67;
 }
 
 .small-btn {
@@ -275,7 +276,6 @@ button {
   display: inline-block;
   width: 140px;
   height: 140px;
-  max-width: 25%;
   text-align: center;
   padding: 20px;
   background: #f7fbfe;
@@ -458,5 +458,11 @@ section.first .img img {
 
   .social + .social {
     margin-left: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  section.first .container {
+    padding-top: 40px;
   }
 }
